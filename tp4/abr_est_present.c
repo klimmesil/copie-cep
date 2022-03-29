@@ -55,17 +55,17 @@ int main(void)
    // deux arbres, un vide et un plein
    struct noeud_t *abr_vide, *abr_ex;
 
-   // cree un arbre vide
-   abr_vide = NULL;
-   // teste la presence de valeurs dans cet arbre
-   printf("Test pour l'arbre vide:");
-   test_presence(abr_vide);
-
    //  cree l'arbre de l'enonce
    abr_ex = abr_enonce();
    // teste la presence de valeur dans cet arbre
    printf("Test pour l'arbre de l'énoncé:");
    test_presence(abr_ex);
+
+   // cree un arbre vide
+   abr_vide = NULL;
+   // teste la presence de valeurs dans cet arbre
+   printf("Test pour l'arbre vide:");
+   test_presence(abr_vide);
 
    return 0;
 }

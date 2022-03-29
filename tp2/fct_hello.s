@@ -20,6 +20,14 @@ DEBUT DU CONTEXTE
 */
 hello:
 /* A compléter */
+    /* reserve la place */
+    addi    sp, sp, -4
+    /* on y sauvegarde l'adresse de retour */
+    sw      ra, 0(sp)
 hello_fin_prologue:
+    /* affiche_HelloWorld(); */
+    jal affiche_HelloWorld
 hello_debut_epilogue:
+    lw      ra, 0(sp)
+    addi    sp, sp, 4
     ret

@@ -4,6 +4,8 @@
 #include <inttypes.h>
 
 #define TAILLE_MAX 150
+#define STR_M(s) #s
+#define STR(s) STR_M(s)
 
 void tri_min(int32_t tab[], uint32_t taille);
 
@@ -25,7 +27,7 @@ int main(void)
    uint32_t taille;
    char tampon[16];
    do {
-      printf("Entrez la taille du tableau voulue (< TAILLE_MAX)\n");
+      printf("Entrez la taille du tableau voulue (<= " STR(TAILLE_MAX) ")\n");
       fgets(tampon, 16, stdin);
       taille = strtoul(tampon, NULL, 0);
    } while (taille > TAILLE_MAX);

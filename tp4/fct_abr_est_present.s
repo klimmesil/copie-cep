@@ -1,4 +1,3 @@
-    .text
 /*
 bool abr_est_present(uint32_t val, struct noeud_t *abr)
 {
@@ -12,8 +11,9 @@ bool abr_est_present(uint32_t val, struct noeud_t *abr)
        return abr_est_present(val, abr->fd);
    }
 }
-
 */
+
+    .text
     .globl abr_est_present
 /* DEBUT DU CONTEXTE
 fonction :

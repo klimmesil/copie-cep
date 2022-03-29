@@ -7,6 +7,7 @@ extern void sommeMem(void);
 
 int main(void)
 {
+   res = 0xdeadbeef;
    sommeMem();
    printf("SommeMem(1 .. 10)  = %" PRIu32 "\n", res);
    return 0;

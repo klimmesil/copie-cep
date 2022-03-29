@@ -16,6 +16,7 @@ void tri_nain(int32_t tab[], uint32_t taille)
     }
 }
 */
+
     .text
 /*  void tri_nain(int32_t tab[], uint32_t taille) */
     .globl tri_nain

@@ -18,7 +18,7 @@ uint32_t pgcd(uint32_t a, uint32_t b)
 /* DEBUT DU CONTEXTE
   Fonction :
     pgcd : feuille
-    => pas d'espace reservé dans la pile
+    => pas besoin de réserver d'espace dans la pile
   Contexte :
     a  : registre a0
     b  : registre a1

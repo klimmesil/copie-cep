@@ -1,4 +1,3 @@
-    .text
 /*
 bool abr_est_present_tail_call(uint32_t val, struct noeud_t *abr)
 {
@@ -12,8 +11,8 @@ bool abr_est_present_tail_call(uint32_t val, struct noeud_t *abr)
        return abr_est_present_tail_call(val, abr->fd);
    }
 }
-
 */
+    .text
     .globl abr_est_present_tail_call
 /* DEBUT DU CONTEXTE
 fonction :

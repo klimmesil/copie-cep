@@ -1,4 +1,3 @@
-    .text
 /*
 void abr_vers_tab(struct noeud_t *abr)
 {
@@ -13,6 +12,7 @@ void abr_vers_tab(struct noeud_t *abr)
 }
 */
 
+    .text
     .globl abr_vers_tab
 /* DEBUT DU CONTEXTE
 fonction :

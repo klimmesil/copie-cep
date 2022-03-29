@@ -20,7 +20,7 @@ void tri_nain(int32_t tab[], uint32_t taille)
     .text
     .globl tri_nain_opt
 /* Version du tri optimisée sans respecter la contrainte de la traduction
- * systématique pour les accès mémoire
+ * systématique pour les accès mémoire (et le calcul de leurs adresses)
    Complétez le contexte ci-dessous en indiquant les registres qui contiendront
    des variables temporaires.  */
 /* DEBUT DU CONTEXTE

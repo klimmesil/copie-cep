@@ -1,6 +1,7 @@
 BINS = taille_chaine inverse_chaine tri_min inverse_liste decoupe_liste palin
 BINS += struct double_rect
 
+PROG ?= inverse_chaine
 RVDIR ?= /matieres/3MMCEP/riscv
 AS = $(RVDIR)/bin/riscv32-unknown-elf-gcc
 ASFLAGS = -g -c

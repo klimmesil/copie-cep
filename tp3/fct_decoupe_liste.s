@@ -21,6 +21,7 @@ struct cellule_t *decoupe_liste(struct cellule_t *l, struct cellule_t **l1, stru
     return l;
 }
 */
+    .text
     .globl decoupe_liste
 /*
 Fonction feuille : A priori pile inchangée, mais besoin de l'adresse des
@@ -42,6 +43,55 @@ Contexte :
   fictif1.val   : pile à sp+0  (champ de type int32_t)
 */
 decoupe_liste:
+    /* struct cellule_t fictif1, fictif2 */
+    addi    sp, sp, -16
 decoupe_liste_fin_prologue:
+    /* *l1 = &fictif1 */
+    sw      sp, 0(a1)
+    /* *l2 = &fictif2 */
+    addi    t0, sp, 8
+    sw      t0, 0(a2)
+while:
+    /* l != NULL */
+    mv      t1, a0
+    beqz    t1, end
+if:
+    /* l -> val $ 2 == 1 */
+    lw      t2, 0(a0)
+    andi    t2, t2, 0x1
+    beqz    t2, else
+
+    /* *(l1)->suiv = l */
+    lw      t3, 0(a1) /* *l1 */
+    sw      a0, 4(t3)
+    /* *l1 = l */
+    sw      a0, 0(a1)
+
+    j       endif
+else:
+    /* (*l2)->suiv = l */
+    lw      t4, 0(a2) /* *l2 */
+    sw      a0, 4(t4)
+    /* *l2 = l */
+    sw      a0, 0(a2)
+endif:
+    /* l = l->suiv */
+    lw      a0, 4(a0)
+    j       while
+end:
+    /* *(l1)->suiv = NUll */
+    lw      t3, 0(a1) /* *l1 */
+    sw      zero, 4(t3)
+    /* (*l2)->suiv = NULL */
+    lw      t4, 0(a2) /* *l2 */
+    sw      zero, 4(t4)
+    /* *l1 = fictif1.suiv */
+    lw      t5, 4(sp)
+    sw      t5, 0(a1)
+    /* *l2 = fictif2.suiv */
+    lw      t6, 12(sp)
+    sw      t6, 0(a2)
+    /* l est deja dans a0 */
 decoupe_liste_debut_epilogue:
+    addi    sp, sp, 16
     ret

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <inttypes.h>
 
-uint32_t fact(uint32_t);
+uint32_t fact_papl(uint32_t);
 
 void erreur_fact(uint32_t n)
 {
@@ -20,3 +20,4 @@ int main()
    printf("Fact(%" PRIu32 ") = %" PRIu32 "\n", n, fact_papl(n));
    return 0;
 }
+

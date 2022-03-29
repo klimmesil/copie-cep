@@ -42,6 +42,7 @@ SECTIONS
   .bss :{
     PROVIDE(_bss_start = .);
     *(.sbss .sbss.*) *(.bss .bss.*)
+    *(scommon COMMON)
     PROVIDE(_bss_end = .);
   } > ram AT > ram :bss
 

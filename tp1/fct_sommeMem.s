@@ -21,27 +21,28 @@ contexte :
  */
 sommeMem:
 sommeMem_fin_prologue:
-    /* initialisation de i a 1 */
-    li      t0, 1
     /* res = 0 */ 
     li      t1, 0
-    sw      t1, res, t2
+    sw      t1, res, t2 /* t2 sert a charger res dans t1 */
+    /* initialisation de i a 1 */
+    li      t0, 1
 for:
     /* fin potentielle du for */
     slti    t2, t0, 11
     beqz    t2, fin
     /* res = res+i */
     add     t1, t0, t1
+    sw      t1, res, t2
     /* i = i + 1 */
     addi    t0, t0, 1
     j       for
 /* A compléter */
 fin:
     /* on ecrit la valeur de res a l'addresse memoire res */
-    sw      t1, res, t0 /* t0 est maintenant inutile */
-    /* sans oublier le retour de res toujours la! */
-    /* je ne mets pas res, mais le res local, qui est egal au res global */
-    mv      a0, t1
+    sw      t1, res, t2 /* t2 est maintenant random */
+
+    /* on retourne res */
+    lw      a0, res
 sommeMem_debut_epilogue:
     ret
 

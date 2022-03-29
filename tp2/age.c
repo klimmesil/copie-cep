@@ -6,8 +6,7 @@ uint32_t age(uint32_t);
 
 int main(void)
 {
-   printf("usage: annee_naissance\n");
-   uint16_t annee = 1999;
+   uint16_t annee = 2001;
    printf("Vous avez donc %" PRIu32 " ans !\n", age(annee));
    return 0;
 }

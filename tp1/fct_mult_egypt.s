@@ -28,7 +28,8 @@ contexte :
 mult_egypt:
 mult_egypt_fin_prologue:
 /* A compléter */
-    /* res = 0 */    
+    /* ma poubelle c'est t3 */
+    /* res = 0 attention local ici */
     li      t0, 0
     /* on charge y et x dans des registres*/    
     lw      t1, y
@@ -47,8 +48,10 @@ if:
 endif:
     /* x = x << 1 */
     slli    t2, t2, 1
+    sw      t2, x, t3
     /* y = y >> 1 */
     srli    t1, t1, 1
+    sw      t1, y, t3
     j       while 
 fin:
     /* on recharge les variables globales */

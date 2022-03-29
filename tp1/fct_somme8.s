@@ -23,25 +23,28 @@ contexte :
 somme8:
 somme8_fin_prologue:
 /* A compléter */
+    /* ma poubelle c'est t3 */
     /* i = 1 */
     li      t0, 1
-    /* je saute l'etape lbu t0, res8, car on met res8 = 0 */
     /* res = 0 */
+    lbu     t1, res8
     li      t1, 0
+    sb      t1, res8, t3
 for:
     /* t2 = i<25?1:0 */
     slti    t2, t0, 25
     beqz    t2, fin
     /* res8 = res8 + i */
     add     t1, t1, t0
+    sb      t1, res8, t3
     /* i++, loop */
     addi    t0, t0, 1
     j for
 fin:
     /* load local into global */
-    sb      t1, res8, t0
+    sb      t1, res8, t3
     /* return res */
-    mv      a0, t1
+    lbu     a0, res8
 somme8_debut_epilogue:
     /* jump to caller */
     ret
