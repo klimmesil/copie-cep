@@ -28,7 +28,7 @@ struct noeud_t *cree_noeud(uint32_t val, struct noeud_t *fg, struct noeud_t *fd)
    return res;
 }
 
-// crée l'ABR donne dans l'enonce
+// cree l'ABR donne dans l'enonce
 struct noeud_t *abr_enonce(void)
 {
    return cree_noeud(8,

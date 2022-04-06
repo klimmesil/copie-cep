@@ -29,6 +29,23 @@ mon_vecteur:
     la   t1, blink
     lbu  t0, (t1)
     xori t0, t0, 0xF
+#  $$$ etd_strip_begin
+    lui  t0, 0x10
+    and  t0, t0, t2
+    bnez t0, incremente
+    lui  t0, 0x20
+    and  t0, t0, t2
+    bnez t0, decremente
+    j    ecriture
+incremente:
+    lbu  t0, (t1)
+    addi t0, t0, 1
+    j    ecriture
+decremente:
+    lbu  t0, (t1)
+    addi t0, t0, -1
+ecriture:
+#  $$$ etd_strip_end
     sb   t0, (t1)
 
     /* écriture de blink sur les LED

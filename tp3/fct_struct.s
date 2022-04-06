@@ -35,8 +35,8 @@ affichage_fin_prologue:
     /* affiche(s.entier, s.ptr); */
     jal  affiche
 affichage_debut_epilogue:
-    lw   ra, 0(sp)
-    addi sp, sp, 4
+    lw   ra, 8(sp)
+    addi sp, sp, 12
     ret
 
 

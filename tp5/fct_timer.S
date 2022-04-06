@@ -16,7 +16,7 @@ gestion_interruptions:
     jal  mon_vecteur_horloge
     j    retour
 interruption_externe:
-    /* À compléter : gestion des boutons poussoirs */
+    /* Pour plus tard : gestion des boutons poussoirs */
 retour:
     lw   ra, 0(sp)
     addi sp, sp, 4

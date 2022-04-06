@@ -37,7 +37,6 @@
 [![abr_vers_tab status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G7_2021_2022/EvalEP/bonsq_eval/abr_vers_tab.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G7_2021_2022/EvalEP/bonsq_eval/abr_vers_tab.log)
 [![tri_nain status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G7_2021_2022/EvalEP/bonsq_eval/tri_nain.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G7_2021_2022/EvalEP/bonsq_eval/tri_nain.log)
 [![tri_nain_opt status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G7_2021_2022/EvalEP/bonsq_eval/tri_nain_opt.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G7_2021_2022/EvalEP/bonsq_eval/tri_nain_opt.log)
-[![tri_nain_superopt status](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G7_2021_2022/EvalEP/bonsq_eval/tri_nain_superopt.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_TP_G7_2021_2022/EvalEP/bonsq_eval/tri_nain_superopt.log)
 
 ## tp5
 

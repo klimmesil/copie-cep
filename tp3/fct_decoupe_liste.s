@@ -44,6 +44,10 @@ Contexte :
 */
 decoupe_liste:
     /* struct cellule_t fictif1, fictif2 */
+    /* NOTE: la pile est inutile car il s'agit
+        d'une feuille. J'ai fait n'importe quoi
+        car je pensais faire quelque chose de
+        recursif. Mais bon ca marche. */
     addi    sp, sp, -16
 decoupe_liste_fin_prologue:
     /* *l1 = &fictif1 */

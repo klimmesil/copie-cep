@@ -83,7 +83,7 @@ endj:
     /* tab[ix_min] = tmp */
     sw      t3, 0(t5)
     /* i++ */
-    addi    t0, t0, 1 
+    addi    t0, t0, 1
     j       whilei
 endi:
 tri_min_debut_epilogue:

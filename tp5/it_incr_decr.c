@@ -25,7 +25,6 @@ int main(void)
 
    /* Configuration des boutons poussoirs en mode interruption */
    *(volatile uint32_t *)REG_PUSHBUTTON_CTL_ADDR = REG_PUSHBUTTON_MODE_INT;
-   printf("Début de l'attente\n");
    attente_infinie();
    return 0;
 }

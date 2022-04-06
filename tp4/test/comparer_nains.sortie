@@ -1,0 +1,5 @@
+Test de performance sur un tableau de grande taille (10000)
+Tri de reference :              90469 nsec.
+Tri par le nain :               2349979 nsec.
+Tri par le nain optimisé:       2091612 nsec.
+Tri par le nain super-optimisé: 1891420 nsec.

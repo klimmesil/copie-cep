@@ -42,6 +42,7 @@ int main(void)
    uint64_t qt, dt, odt, sdt; /* qsort time, dwarf sort time, optimized dt */
 
    uint32_t taille = TAILLE;
+   srandom(0xbaffe);
    init_tabs(tab, ref, taille);
    // Nain de base
    dt = maintenant();

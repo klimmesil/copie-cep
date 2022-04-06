@@ -1,5 +1,5 @@
-BINS = abr_est_present abr_est_present_tail_call abr_vers_tab tri_nain tri_nain_opt tri_nain_superopt
-BINS += comparer_nains
+BINS = abr_est_present abr_est_present_tail_call abr_vers_tab tri_nain tri_nain_opt
+BINS += tri_nain_superopt comparer_nains
 
 RVDIR ?= /matieres/3MMCEP/riscv
 AS = $(RVDIR)/bin/riscv32-unknown-elf-gcc

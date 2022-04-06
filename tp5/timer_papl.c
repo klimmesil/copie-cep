@@ -86,7 +86,6 @@ int main(void)
    param = &inst;
 
    /* Démarrage du timer */
-   printf("C'est parti!\n");
    reveil(TICK_ALARM);
 
    while (param->tics <= 100);
